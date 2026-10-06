@@ -1,0 +1,532 @@
+/**
+ * Game of Thrones Aesthetic Design System
+ * Winterfell (Ice) vs Valyria (Fire) Realms
+ */
+
+:root {
+  /* Fonts */
+  --font-cinzel: 'Cinzel', 'Cinzel Decorative', Georgia, serif;
+  --font-body: 'Marcellus', Georgia, serif;
+  --font-rune: 'Cinzel Decorative', serif;
+
+  /* Realm 1: Winterfell (House Stark) */
+  --realm-bg: #070a0f;
+  --realm-bg-gradient: radial-gradient(circle at 50% 20%, rgba(18, 28, 43, 0.85) 0%, #080c14 60%, #030508 100%);
+  --realm-card-bg: rgba(14, 22, 34, 0.78);
+  --realm-card-border: rgba(100, 180, 240, 0.32);
+  --realm-card-hover: rgba(22, 35, 54, 0.9);
+  
+  --realm-accent: #38bdf8;
+  --realm-accent-secondary: #818cf8;
+  --realm-accent-glow: rgba(56, 189, 248, 0.45);
+  --realm-rune-glow: #38bdf8;
+  
+  --gold-primary: #d4af37;
+  --gold-bright: #f9e38d;
+  --gold-dark: #8c6d1d;
+  --gold-gradient: linear-gradient(135deg, #f9e38d 0%, #d4af37 50%, #8c6d1d 100%);
+  
+  --steel-light: #e2e8f0;
+  --steel-mid: #94a3b8;
+  --steel-dark: #334155;
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-parchment: #f4ebd0;
+
+  /* Medieval Parchment */
+  --parchment-bg: #1c1917;
+  --parchment-border: #78350f;
+  --wax-red: #b91c1c;
+  --wax-glow: rgba(185, 28, 28, 0.6);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Realm 2: King's Landing (House Lannister / Red Keep) */
+[data-realm="kingslanding"] {
+  --realm-bg: #0e0a05;
+  --realm-bg-gradient: radial-gradient(circle at 50% 20%, rgba(45, 30, 12, 0.85) 0%, #140d06 60%, #060402 100%);
+  --realm-card-bg: rgba(28, 19, 10, 0.82);
+  --realm-card-border: rgba(245, 180, 50, 0.38);
+  --realm-card-hover: rgba(42, 28, 14, 0.92);
+
+  --realm-accent: #f59e0b;
+  --realm-accent-secondary: #dc2626;
+  --realm-accent-glow: rgba(245, 158, 11, 0.5);
+  --realm-rune-glow: #fbbf24;
+
+  --gold-primary: #f59e0b;
+  --gold-bright: #fef08a;
+  --gold-dark: #92400e;
+  --gold-gradient: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+}
+
+/* Realm 3: Dragonstone (House Targaryen / Volcanic Sea Fortress) */
+[data-realm="dragonstone"], [data-realm="fire"] {
+  --realm-bg: #0c0706;
+  --realm-bg-gradient: radial-gradient(circle at 50% 20%, rgba(42, 17, 14, 0.85) 0%, #120807 60%, #050302 100%);
+  --realm-card-bg: rgba(32, 16, 15, 0.82);
+  --realm-card-border: rgba(245, 100, 50, 0.38);
+  --realm-card-hover: rgba(48, 22, 20, 0.92);
+
+  --realm-accent: #f97316;
+  --realm-accent-secondary: #ef4444;
+  --realm-accent-glow: rgba(249, 115, 22, 0.5);
+  --realm-rune-glow: #ff5500;
+
+  --gold-primary: #ea580c;
+  --gold-bright: #fdba74;
+  --gold-dark: #7c2d12;
+  --gold-gradient: linear-gradient(135deg, #fdba74 0%, #ea580c 50%, #7c2d12 100%);
+}
+
+/* Realm 4: Castle Black (The Night's Watch / The Wall / True Z-Black) */
+[data-realm="castleblack"] {
+  --realm-bg: #000000;
+  --realm-bg-gradient: radial-gradient(circle at 50% 20%, rgba(18, 22, 28, 0.90) 0%, #08090c 55%, #000000 100%);
+  --realm-card-bg: rgba(8, 10, 14, 0.92);
+  --realm-card-border: rgba(148, 163, 184, 0.28);
+  --realm-card-hover: rgba(16, 20, 28, 0.96);
+
+  --realm-accent: #e2e8f0;
+  --realm-accent-secondary: #94a3b8;
+  --realm-accent-glow: rgba(226, 232, 240, 0.38);
+  --realm-rune-glow: #f8fafc;
+
+  --gold-primary: #cbd5e1;
+  --gold-bright: #ffffff;
+  --gold-dark: #475569;
+  --gold-gradient: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #475569 100%);
+}
+
+/* Realm 5: The Wall (Guardian of The Wall / Pure Snow White / Living Blue Dragonfire) */
+[data-realm="thewall"] {
+  --realm-bg: #02060e;
+  --realm-bg-gradient: radial-gradient(circle at 35% 25%, rgba(14, 30, 56, 0.85) 0%, #040a14 55%, #010307 100%);
+  --realm-card-bg: rgba(6, 14, 26, 0.86);
+  --realm-card-border: rgba(255, 255, 255, 0.45);
+  --realm-card-hover: rgba(14, 28, 50, 0.94);
+
+  --realm-accent: #ffffff;
+  --realm-accent-secondary: #e0f2fe;
+  --realm-accent-glow: rgba(255, 255, 255, 0.85);
+  --realm-rune-glow: #ffffff;
+
+  --gold-primary: #ffffff;
+  --gold-bright: #ffffff;
+  --gold-dark: #94a3b8;
+  --gold-gradient: linear-gradient(135deg, #ffffff 0%, #f0f9ff 45%, #94a3b8 100%);
+
+  --steel-light: #ffffff;
+  --steel-mid: #cbd5e1;
+  --steel-dark: #475569;
+
+  --text-main: #ffffff;
+  --text-muted: #cbd5e1;
+  --text-parchment: #f8fafc;
+}
+
+/* Real Castle Background Layers for Each Realm */
+.castle-bg-layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.castle-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  opacity: 0; /* Hidden - removed as requested, ready for user's custom images */
+  transition: opacity 1.4s ease;
+}
+
+.castle-winterfell {
+  background-image: url('../assets/images/castle_winterfell.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.70) contrast(1.18) saturate(1.10);
+  transform: scale(1.04);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 20s ease-out;
+}
+
+.castle-kingslanding {
+  background-image: url('../assets/images/castle_kingslanding.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.68) contrast(1.18) saturate(1.12);
+  transform: scale(1.04);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 20s ease-out;
+}
+
+.castle-dragonstone {
+  background-image: url('../assets/images/castle_dragonstone.jpg');
+  background-size: cover;
+  background-position: center 36%;
+  filter: brightness(0.70) contrast(1.22) saturate(1.18);
+  transform: scale(1.04);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 20s ease-out;
+}
+
+.castle-castleblack {
+  background-image: url('../assets/images/castle_black.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.65) contrast(1.22) saturate(0.95);
+  transform: scale(1.04);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 20s ease-out;
+}
+
+.castle-thewall {
+  background-image: url('../assets/images/the_wall_dragon.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.88) contrast(1.12) saturate(1.15);
+  transform: scale(1.04);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 20s ease-out;
+}
+
+/* Atmospheric realm background gradients */
+.castle-bg-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: background 1.4s ease;
+  z-index: 1;
+}
+
+/* Active Winterfell Image & Custom Arctic Snow Bloom Atmospheric Effects */
+[data-realm="winterfell"] .castle-winterfell,
+[data-realm="ice"] .castle-winterfell {
+  opacity: 0.88;
+  transform: scale(1.0);
+}
+
+[data-realm="winterfell"] .castle-bg-overlay,
+[data-realm="ice"] .castle-bg-overlay {
+  background: 
+    /* 1. Northern Morning Sun & Winter Snow Bloom matching upper-left light in the image */
+    radial-gradient(ellipse at 32% 18%, rgba(220, 245, 255, 0.34) 0%, rgba(125, 195, 255, 0.18) 45%, transparent 75%),
+    /* 2. Deep Stark Granite & Midnight Frost Haze */
+    radial-gradient(circle at 50% 50%, rgba(14, 26, 44, 0.35) 0%, rgba(7, 12, 22, 0.74) 60%, rgba(3, 5, 10, 0.95) 100%),
+    /* 3. Bottom ground shadow for sharp UI text and card readability */
+    linear-gradient(to top, rgba(2, 4, 8, 0.96) 0%, rgba(6, 12, 22, 0.45) 45%, transparent 85%);
+}
+
+/* Active King's Landing Image & Custom Sunset Golden Hour Atmospheric Effects */
+[data-realm="kingslanding"] .castle-kingslanding {
+  opacity: 0.88;
+  transform: scale(1.0);
+}
+
+[data-realm="kingslanding"] .castle-bg-overlay {
+  background: 
+    /* 1. Golden Hour Sunset glow matching the painting's sky */
+    radial-gradient(ellipse at 60% 25%, rgba(254, 215, 120, 0.35) 0%, rgba(245, 158, 11, 0.18) 45%, transparent 75%),
+    /* 2. Rich Lannister Crimson & Amber haze */
+    radial-gradient(circle at 45% 45%, rgba(68, 28, 8, 0.35) 0%, rgba(25, 12, 5, 0.72) 60%, rgba(10, 5, 2, 0.94) 100%),
+    /* 3. Deep ground shadow at the bottom for high UI text readability */
+    linear-gradient(to top, rgba(6, 3, 1, 0.95) 0%, rgba(14, 8, 3, 0.45) 45%, transparent 85%);
+}
+
+/* Active Dragonstone Image & Custom Volcanic Dragonflame Atmospheric Effects */
+[data-realm="dragonstone"] .castle-dragonstone,
+[data-realm="fire"] .castle-dragonstone {
+  opacity: 0.88;
+  transform: scale(1.0);
+}
+
+[data-realm="dragonstone"] .castle-bg-overlay,
+[data-realm="fire"] .castle-bg-overlay {
+  background: 
+    /* 1. Volcanic Dragonflame & Sky Ember Glow highlighting the flying dragon in upper-right */
+    radial-gradient(ellipse at 78% 22%, rgba(249, 115, 22, 0.32) 0%, rgba(220, 38, 38, 0.16) 45%, transparent 75%),
+    /* 2. Deep Obsidian Volcanic Rock & Coastal Mist Haze */
+    radial-gradient(circle at 48% 46%, rgba(45, 16, 12, 0.35) 0%, rgba(18, 7, 5, 0.74) 60%, rgba(8, 2, 2, 0.95) 100%),
+    /* 3. Bottom ground shadow for high UI text, button, and project card readability */
+    linear-gradient(to top, rgba(6, 2, 2, 0.96) 0%, rgba(18, 6, 5, 0.45) 45%, transparent 85%);
+}
+
+/* Active Castle Black Image & Custom Night's Watch Obsidian Z-Black Atmospheric Effects */
+[data-realm="castleblack"] .castle-castleblack {
+  opacity: 0.92;
+  transform: scale(1.0);
+}
+
+[data-realm="castleblack"] .castle-bg-overlay {
+  background: 
+    /* 1. Cold Northern Moonlight / Pale Frost Glow over Castle Black battlements */
+    radial-gradient(ellipse at 50% 16%, rgba(220, 235, 255, 0.20) 0%, rgba(148, 163, 184, 0.08) 45%, transparent 75%),
+    /* 2. Deep True Z-Black Obsidian & The Wall Shadows */
+    radial-gradient(circle at 50% 50%, rgba(10, 14, 20, 0.40) 0%, rgba(3, 4, 6, 0.82) 60%, rgba(0, 0, 0, 0.98) 100%),
+    /* 3. Pitch-black ground shadow for ultra-sharp UI text, buttons, and project card readability */
+    linear-gradient(to top, #000000 0%, rgba(4, 6, 9, 0.65) 45%, transparent 85%);
+}
+
+/* Active The Wall Background & Living Dragonfire FX */
+[data-realm="thewall"] .castle-thewall {
+  opacity: 1;
+  transform: scale(1.0);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.thewall-fire-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+[data-realm="thewall"] .thewall-fire-canvas {
+  opacity: 1;
+}
+
+[data-realm="thewall"] .castle-bg-overlay {
+  background: 
+    /* 1. Glacial frost impact glow matching The Wall collision zone in the picture */
+    radial-gradient(ellipse at 45.3% 56.9%, rgba(185, 230, 248, 0.14) 0%, rgba(60, 140, 210, 0.06) 35%, transparent 65%),
+    /* 2. Viserion Dragon Eye & Snout arctic frost radiance matching picture */
+    radial-gradient(ellipse at 76.3% 23.3%, rgba(185, 230, 248, 0.12) 0%, rgba(60, 140, 210, 0.05) 30%, transparent 55%),
+    /* 3. Deep midnight frost ambient overlay making background slightly dark */
+    radial-gradient(ellipse at 50% 45%, rgba(2, 6, 14, 0.25) 0%, rgba(2, 6, 14, 0.55) 70%, rgba(1, 3, 7, 0.82) 100%),
+    /* 4. Bottom shadow for crystal sharp text, buttons, and project cards */
+    linear-gradient(to top, rgba(1, 3, 7, 0.92) 0%, rgba(2, 6, 14, 0.45) 30%, transparent 60%);
+}
+
+/* GoT Intro Theme Music Header Button */
+.btn-music {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.btn-music.playing {
+  border-color: var(--gold-bright);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.4);
+}
+.btn-music.playing #music-icon {
+  display: inline-block;
+  animation: pulseScale 1.8s ease-in-out infinite;
+}
+@keyframes pulseScale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+}
+
+/* Medieval Ornate Frame & Filigree */
+.medieval-frame {
+  position: relative;
+  border: 1px solid var(--realm-card-border);
+  background: var(--realm-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.medieval-frame:hover {
+  border-color: var(--realm-accent);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8), 0 0 25px var(--realm-accent-glow);
+}
+
+/* Decorative Gold Corner Brackets */
+.corner-ornament {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--gold-primary);
+  pointer-events: none;
+  z-index: 2;
+}
+.corner-tl { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
+.corner-tr { top: -1px; right: -1px; border-top: 2px solid; border-right: 2px solid; }
+.corner-bl { bottom: -1px; left: -1px; border-bottom: 2px solid; border-left: 2px solid; }
+.corner-br { bottom: -1px; right: -1px; border-bottom: 2px solid; border-right: 2px solid; }
+
+/* Valyrian Steel Text Shimmer */
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.rune-glow {
+  color: var(--realm-accent);
+  text-shadow: 0 0 14px var(--realm-accent-glow);
+}
+
+/* Wax Seal Button */
+.wax-seal {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ef4444, #991b1b, #450a0a);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 15px var(--wax-glow), inset 0 2px 5px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.wax-seal:hover {
+  transform: scale(1.08);
+}
+.wax-seal:active {
+  transform: scale(0.96);
+}
+.wax-seal::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   THE WALL — PURE SNOW WHITE THEMATIC STYLING
+   ========================================================================== */
+[data-realm="thewall"] .medieval-frame {
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(4, 10, 20, 0.88);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(255, 255, 255, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.06);
+}
+
+[data-realm="thewall"] .medieval-frame:hover {
+  border-color: #ffffff;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.92), 0 0 35px rgba(255, 255, 255, 0.65), inset 0 0 20px rgba(255, 255, 255, 0.18);
+}
+
+[data-realm="thewall"] .corner-ornament {
+  border-color: #ffffff !important;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
+}
+
+[data-realm="thewall"] .gold-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 45%, #94a3b8 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-realm="thewall"] .rune-glow {
+  color: #ffffff !important;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95) !important;
+}
+
+[data-realm="thewall"] .wax-seal {
+  background: radial-gradient(circle at 35% 35%, #ffffff, #cbd5e1, #64748b) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 24px rgba(255, 255, 255, 0.75), inset 0 2px 5px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Highly visible, high-contrast buttons in The Wall theme */
+[data-realm="thewall"] .nav-btn {
+  background: rgba(6, 16, 32, 0.90) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-realm="thewall"] .nav-btn:hover {
+  background: rgba(16, 36, 68, 0.95) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Distinct high-contrast 3D Inspect Blade Button */
+[data-realm="thewall"] .btn-inspect {
+  background: linear-gradient(135deg, rgba(16, 36, 72, 0.95), rgba(6, 18, 38, 0.98)) !important;
+  border: 1.5px solid #ffffff !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.4), inset 0 0 12px rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-realm="thewall"] .btn-inspect:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%) !important;
+  border-color: #ffffff !important;
+  color: #020617 !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Primary Action Button (White background with dark contrasting text for 100% visibility) */
+[data-realm="thewall"] .btn-primary {
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%) !important;
+  color: #020617 !important;
+  font-weight: 800 !important;
+  border: 1.5px solid #ffffff !important;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-realm="thewall"] .btn-primary:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.95) !important;
+  transform: translateY(-2px) scale(1.02);
+}
+
+[data-realm="thewall"] .btn-secondary {
+  background: rgba(6, 16, 32, 0.88) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.55) !important;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+
+[data-realm="thewall"] .btn-secondary:hover {
+  border-color: #ffffff !important;
+  background: rgba(16, 36, 68, 0.95) !important;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6) !important;
+}
+
+[data-realm="thewall"] .hero-subtitle,
+[data-realm="thewall"] .stat-label {
+  color: #e2e8f0 !important;
+}
+
+[data-realm="thewall"] .stat-value {
+  color: #ffffff !important;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.6);
+}
+
+[data-realm="thewall"] .stat-box {
+  border-left-color: #ffffff !important;
+  background: rgba(6, 14, 26, 0.75) !important;
+}
+
+[data-realm="thewall"] .hero-house-crest .hero-sigil-large {
+  filter: brightness(1.1) contrast(1.1) !important;
+}
+
+[data-realm="thewall"] .hero-content,
+[data-realm="thewall"] .hero-name,
+[data-realm="thewall"] .hero-subtitle,
+[data-realm="thewall"] .hero-realm-title,
+[data-realm="thewall"] .hero-motto {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Vignette in The Wall theme for slightly dark dramatic contrast */
+html[data-realm="thewall"] .vignette-overlay {
+  background: radial-gradient(circle at center, transparent 50%, rgba(0, 5, 12, 0.60) 100%) !important;
+}
+

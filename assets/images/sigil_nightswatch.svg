@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="frostSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#e2e8f0" />
+      <stop offset="70%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="steelGlint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="obsidianBlack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f141c" />
+      <stop offset="40%" stop-color="#07090d" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <filter id="watchGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="250" cy="250" r="230" fill="none" stroke="url(#frostSilver)" stroke-width="4" stroke-dasharray="8 4" opacity="0.85"/>
+  <circle cx="250" cy="250" r="220" fill="none" stroke="url(#frostSilver)" stroke-width="2" opacity="0.95"/>
+  <circle cx="250" cy="250" r="208" fill="none" stroke="url(#steelGlint)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+
+  <!-- Medieval Castle Black Shield -->
+  <path d="M 130 140 Q 250 120 370 140 C 370 280 330 360 250 420 C 170 360 130 280 130 140 Z" 
+        fill="url(#obsidianBlack)" stroke="url(#frostSilver)" stroke-width="6" filter="url(#watchGlow)"/>
+  <path d="M 145 152 Q 250 135 355 152 C 355 275 320 345 250 402 C 180 345 145 275 145 152 Z" 
+        fill="none" stroke="url(#steelGlint)" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.85"/>
+
+  <!-- The Wall &amp; Battlements Silhouette in background of shield -->
+  <path d="M 160 230 L 180 230 L 180 220 L 195 220 L 195 230 L 210 230 L 210 220 L 225 220 L 225 230 L 275 230 L 275 220 L 290 220 L 290 230 L 305 230 L 305 220 L 320 220 L 320 230 L 340 230 L 340 280 Q 250 310 160 280 Z" fill="#0b0f16" opacity="0.75"/>
+
+  <!-- Night Watch Raven and Valyrian Sword Crest -->
+  <g transform="translate(250, 260) scale(1.08)">
+    <!-- Central Valyrian Steel Sword Longclaw -->
+    <path d="M -4 -85 L 0 -115 L 4 -85 L 3 95 L 0 118 L -3 95 Z" fill="url(#steelGlint)"/>
+    <line x1="0" y1="-110" x2="0" y2="95" stroke="#ffffff" stroke-width="1.5"/>
+    <path d="M -36 -82 L 36 -82 L 30 -74 L -30 -74 Z" fill="url(#frostSilver)"/>
+    <circle cx="-33" cy="-78" r="4" fill="#ffffff"/>
+    <circle cx="33" cy="-78" r="4" fill="#ffffff"/>
+    <rect x="-4" y="-102" width="8" height="20" rx="2" fill="#1e293b"/>
+    <circle cx="0" cy="-106" r="7" fill="url(#frostSilver)"/>
+    <circle cx="0" cy="-106" r="3" fill="#ffffff"/>
+
+    <!-- Outstretched Raven Wings -->
+    <path d="M -8 -45 C -45 -85 -100 -95 -135 -70 C -120 -50 -95 -35 -75 -25 C -105 -20 -125 5 -115 28 C -95 20 -70 12 -45 5 C -25 -2 -12 -25 -8 -45 Z" fill="url(#frostSilver)" opacity="0.95"/>
+    <path d="M -30 -40 C -60 -65 -105 -72 -125 -55 C -100 -40 -75 -25 -55 -15 Z" fill="#ffffff" opacity="0.3"/>
+    
+    <path d="M 8 -45 C 45 -85 100 -95 135 -70 C 120 -50 95 -35 75 -25 C 105 -20 125 5 115 28 C 95 20 70 12 45 5 C 25 -2 12 -25 8 -45 Z" fill="url(#frostSilver)" opacity="0.95"/>
+    <path d="M 30 -40 C 60 -65 105 -72 125 -55 C 100 -40 75 -25 55 -15 Z" fill="#ffffff" opacity="0.3"/>
+
+    <!-- Raven Body and Feathers -->
+    <path d="M -18 -45 C -24 -15 -18 25 0 45 C 18 25 24 -15 18 -45 Z" fill="url(#frostSilver)"/>
+    <path d="M -10 -40 C -14 -15 -10 15 0 32 C 10 15 14 -15 10 -40 Z" fill="#0f172a"/>
+
+    <!-- Raven Head and Beak -->
+    <path d="M 0 -68 C -14 -68 -16 -50 -10 -42 C -5 -35 5 -35 10 -42 C 16 -50 14 -68 0 -68 Z" fill="url(#frostSilver)"/>
+    <path d="M -5 -54 L 0 -72 L 5 -54 Z" fill="#ffffff"/>
+    <circle cx="-4" cy="-52" r="2.2" fill="#000000"/>
+    <circle cx="4" cy="-52" r="2.2" fill="#000000"/>
+    <circle cx="-3.5" cy="-52.5" r="0.8" fill="#ffffff"/>
+    <circle cx="3.5" cy="-52.5" r="0.8" fill="#ffffff"/>
+
+    <!-- Talons gripping the sword hilt -->
+    <path d="M -12 -25 L -16 -12 L -8 -15 Z" fill="#ffffff"/>
+    <path d="M 12 -25 L 16 -12 L 8 -15 Z" fill="#ffffff"/>
+  </g>
+</svg>
